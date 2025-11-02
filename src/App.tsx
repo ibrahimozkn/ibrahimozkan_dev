@@ -4,6 +4,7 @@ import Layout from './components/Layout';
 import Blog from './pages/Blog';
 import data from './assets/data.json';
 import BlogPost from './pages/BlogPost';
+import Projects from './pages/Projects';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/blog" element={<Blog blogPosts={data.blogPosts} />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/projects" element={<Projects projects={data.projects} />} />
           </Route>
         </Routes>
       </BrowserRouter>
