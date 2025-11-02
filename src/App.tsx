@@ -1,6 +1,9 @@
 import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Layout from './components/Layout';
+import Blog from './pages/Blog';
+import data from './assets/data.json';
+import BlogPost from './pages/BlogPost';
 
 function App() {
   return (
@@ -15,7 +18,8 @@ function App() {
             }
           >
             <Route path="/" element={<Home />} />
-            <Route path="/blog" element={<div>Blog Page</div>} />
+            <Route path="/blog" element={<Blog blogPosts={data.blogPosts} />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
           </Route>
         </Routes>
       </BrowserRouter>

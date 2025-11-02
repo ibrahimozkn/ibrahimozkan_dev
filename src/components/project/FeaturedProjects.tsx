@@ -1,5 +1,4 @@
 import ProjectCard from './ProjectCard';
-
 interface FeaturedProjectsProps {
   projects: Project[];
 }

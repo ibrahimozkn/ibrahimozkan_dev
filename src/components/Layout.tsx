@@ -8,7 +8,7 @@ interface LayoutProps {
 
 function Layout({ children }: LayoutProps) {
   return (
-    <div className="mx-auto min-h-screen max-w-6xl">
+    <div className="mx-auto flex min-h-screen w-full max-w-6xl flex-col">
       <Navbar />
 
       <main className="grow">{children}</main>
