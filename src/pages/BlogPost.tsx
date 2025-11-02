@@ -1,8 +1,10 @@
 import { useParams } from 'react-router-dom';
 import data from '../assets/data.json';
 import { Link } from 'react-router-dom';
-import { Md } from '@m2d/react-markdown/server';
+import remarkGfm from 'remark-gfm';
+
 import { useEffect, useState } from 'react';
+import Markdown from 'react-markdown';
 function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const [markdown, setMarkdown] = useState<string>('');
@@ -60,7 +62,7 @@ function BlogPost() {
       <h1 className="text-4xl font-bold text-white">{post.title}</h1>
       <p className="text-white/70">{formattedDate}</p>
       <div className="prose prose-invert prose-headings:text-white prose-p:text-gray-300 prose-a:text-primary prose-strong:text-white prose-code:text-primary max-w-none">
-        <Md>{markdown}</Md>
+        <Markdown remarkPlugins={[remarkGfm]}>{markdown}</Markdown>
       </div>
     </div>
   );
