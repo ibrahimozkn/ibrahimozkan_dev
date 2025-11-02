@@ -1,75 +1,155 @@
-# React + TypeScript + Vite
+# ibrahimozkan.dev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, performant personal portfolio website built with React, TypeScript, and Vite. Showcase your projects, blog posts, and professional journey with a sleek, responsive design.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design** - Mobile-first approach with Tailwind CSS
+- **Blog System** - Write and publish blog posts with Markdown support
+- **Project Showcase** - Highlight your featured projects with descriptions and technologies
+- **Dark Mode Ready** - Built with a dark theme foundation
+- **Fast Performance** - Optimized with Vite and React Compiler
+- **Type-Safe** - Full TypeScript support for reliability
+- **Code Syntax Highlighting** - Beautiful code blocks in blog posts
+- **Modern Stack** - Latest versions of React (19), React Router (7), and supporting libraries
 
-## React Compiler
+## 🚀 Quick Start
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### Prerequisites
 
-Note: This will impact Vite dev & build performances.
+- Node.js 16+
+- npm or yarn
 
-## Expanding the ESLint configuration
+### Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Clone the repository:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone <repository-url>
+cd ibrahimozkan_dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
+
+The site will be available at `http://localhost:5173`
+
+## 📦 Available Scripts
+
+- `npm run dev` - Start the development server with HMR
+- `npm run build` - Build for production with TypeScript checking
+- `npm run preview` - Preview the production build
+- `npm run lint` - Run ESLint to check code quality
+- `npm run format` - Format code with Prettier
+- `npm run format:check` - Check code formatting without changes
+
+## 📁 Project Structure
+
+```
+src/
+├── pages/              # Route pages
+│   ├── Home.tsx
+│   ├── About.tsx
+│   ├── Projects.tsx
+│   ├── Blog.tsx
+│   └── BlogPost.tsx
+├── components/         # Reusable components
+│   ├── Layout.tsx
+│   ├── Navbar.tsx
+│   ├── Footer.tsx
+│   ├── Hero.tsx
+│   ├── SectionCard.tsx
+│   ├── TimelineItem.tsx
+│   ├── CodeBlock.tsx
+│   ├── blog/
+│   └── project/
+├── assets/            # Static assets and data
+│   ├── data.json      # Blog posts and projects data
+│   └── blog_posts/    # Markdown blog posts
+├── lib/               # Utility libraries
+├── utils/             # Helper functions
+└── types/             # TypeScript type definitions
+```
+
+## 🎨 Customization
+
+### Adding Blog Posts
+
+Blog posts are stored in `src/assets/blog_posts/` as Markdown files and referenced in `src/assets/data.json`.
+
+### Adding Projects
+
+Update the `projects` array in `src/assets/data.json` to add new projects to your portfolio.
+
+## 🔧 Tech Stack
+
+- **Frontend Framework**: React 19
+- **Language**: TypeScript
+- **Build Tool**: Vite 7
+- **Styling**: Tailwind CSS 4 with Typography plugin
+- **Routing**: React Router DOM 7
+- **Markdown**: React Markdown with GFM support
+- **Code Highlighting**: React Syntax Highlighter
+- **Icons**: React Icons
+- **Code Quality**: ESLint, Prettier
+- **Compiler**: React Compiler (experimental)
+
+## 🎯 Pages
+
+- **Home** - Landing page with hero section
+- **About** - Your professional biography and background
+- **Projects** - Showcase of your work and projects
+- **Blog** - List of blog posts with previews
+- **Blog Post** - Individual blog post with full content
+
+## 📝 Styling
+
+This project uses Tailwind CSS v4 with:
+
+- Custom dark theme configuration
+- Tailwind Typography plugin for content-rich pages
+- Responsive design utilities
+- Custom color palette and spacing
+
+## 🚀 Deployment
+
+Build the project for production:
+
+```bash
+npm run build
+```
+
+The optimized build will be in the `dist/` directory, ready to deploy to:
+
+- Vercel
+- Netlify
+- GitHub Pages
+- Any static hosting service
+
+## 📋 Code Quality
+
+This project maintains high code quality standards:
+
+- **ESLint** - Configured for React and TypeScript best practices
+- **Prettier** - Automatic code formatting
+- **TypeScript** - Strict type checking enabled
+
+Run quality checks:
+
+```bash
+npm run lint        # Check for linting issues
+npm run format:check # Check formatting
+```
+
+---
+
+**Happy building! 🚀**
