@@ -1,0 +1,8 @@
+node_modules
+dist
+build
+.vscode
+public
+.vite
+package-lock.json
+yarn.lock

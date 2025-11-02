@@ -1,0 +1,62 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "E-Commerce Platform",
+      "description": "A full-stack e-commerce platform with real-time inventory management, payment processing, and admin dashboard. Features include product search, filtering, cart management, and order tracking.",
+      "technologies": ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
+      "link": "https://ecommerce-demo.example.com",
+      "githubLink": "https://github.com/ibrahimozkan/ecommerce-platform",
+      "demoLink": "https://ecommerce-demo.example.com",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "AI Chat Application",
+      "description": "Real-time chat application powered by AI with natural language processing. Supports group chats, file sharing, and intelligent message suggestions using GPT-4.",
+      "technologies": ["Next.js", "TypeScript", "OpenAI API", "Socket.io", "PostgreSQL"],
+      "link": "https://ai-chat.example.com",
+      "githubLink": "https://github.com/ibrahimozkan/ai-chat-app",
+      "demoLink": "https://ai-chat.example.com",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "Project Management Tool",
+      "description": "Collaborative project management tool with kanban boards, gantt charts, time tracking, and team collaboration features. Built for remote teams.",
+      "technologies": ["Vue.js", "Firebase", "Vuetify", "Chart.js"],
+      "link": "https://pm-tool.example.com",
+      "githubLink": "https://github.com/ibrahimozkan/project-management",
+      "demoLink": "https://pm-tool.example.com",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "title": "Weather Forecast Dashboard",
+      "description": "Interactive weather dashboard with real-time forecasts, historical data visualization, and location-based alerts. Integrates multiple weather APIs for accuracy.",
+      "technologies": ["React", "TypeScript", "D3.js", "Weather API", "Tailwind CSS"],
+      "link": "https://weather-dash.example.com",
+      "githubLink": "https://github.com/ibrahimozkan/weather-dashboard",
+      "featured": true
+    },
+    {
+      "id": 5,
+      "title": "Fitness Tracker App",
+      "description": "Mobile-first fitness tracking application with workout plans, nutrition logging, progress tracking, and social features. Syncs with wearable devices.",
+      "technologies": ["React Native", "Redux", "Express", "MySQL", "AWS"],
+      "link": "https://fitness-tracker.example.com",
+      "demoLink": "https://fitness-tracker.example.com",
+      "featured": true
+    },
+    {
+      "id": 6,
+      "title": "Blog CMS Platform",
+      "description": "Headless CMS for bloggers with markdown support, SEO optimization, analytics, and multi-author capabilities. Clean and intuitive admin interface.",
+      "technologies": ["Next.js", "GraphQL", "Prisma", "PostgreSQL", "Vercel"],
+      "link": "https://blog-cms.example.com",
+      "githubLink": "https://github.com/ibrahimozkan/blog-cms",
+      "demoLink": "https://blog-cms.example.com",
+      "featured": true
+    }
+  ]
+}
