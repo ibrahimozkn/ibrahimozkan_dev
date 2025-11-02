@@ -58,5 +58,31 @@
       "demoLink": "https://blog-cms.example.com",
       "featured": true
     }
+  ],
+  "blogPosts": [
+    {
+      "id": 1,
+      "title": "Building Scalable React Applications with TypeScript",
+      "date": "2024-10-15",
+      "summary": "Learn best practices for structuring large-scale React applications with TypeScript, including type safety patterns, component design, and state management strategies."
+    },
+    {
+      "id": 2,
+      "title": "Modern CSS Techniques with Tailwind CSS",
+      "date": "2024-10-22",
+      "summary": "Explore advanced Tailwind CSS patterns, custom configurations, and how to build responsive designs efficiently without writing custom CSS."
+    },
+    {
+      "id": 3,
+      "title": "Optimizing Web Performance: A Complete Guide",
+      "date": "2024-10-28",
+      "summary": "Deep dive into web performance optimization techniques including code splitting, lazy loading, image optimization, and Core Web Vitals improvements."
+    },
+    {
+      "id": 4,
+      "title": "Understanding React Server Components",
+      "date": "2024-11-01",
+      "summary": "A comprehensive guide to React Server Components, their benefits, use cases, and how they change the way we think about building React applications."
+    }
   ]
 }

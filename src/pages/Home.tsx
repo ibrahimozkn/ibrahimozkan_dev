@@ -1,7 +1,8 @@
 import Navbar from '../components/Navbar';
-import Hero from '../components/hero';
+import Hero from '../components/Hero';
 import FeaturedProjects from '../components/FeaturedProjects';
-import projects from '../assets/projects.json';
+import data from '../assets/data.json';
+import LatestBlogPosts from '../components/LatestBlogPosts';
 
 function Home() {
   return (
@@ -10,8 +11,9 @@ function Home() {
       <div className="flex flex-col space-y-20 p-10">
         <Hero />
         <FeaturedProjects
-          projects={projects.projects.filter((project) => project.featured).slice(0, 2)}
+          projects={data.projects.filter((project) => project.featured).slice(0, 2)}
         />
+        <LatestBlogPosts blogPosts={data.blogPosts} />
       </div>
     </div>
   );

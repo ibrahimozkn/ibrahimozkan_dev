@@ -11,4 +11,11 @@ declare global {
     demoLink?: string;
     featured: boolean;
   }
+
+  interface BlogPost {
+    id: number;
+    title: string;
+    date: string;
+    summary: string;
+  }
 }
