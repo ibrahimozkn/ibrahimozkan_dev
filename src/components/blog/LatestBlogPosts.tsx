@@ -11,7 +11,7 @@ function LatestBlogPosts({ blogPosts }: LatestBlogPostsProps) {
         <span className="text-primary">//</span> Latest Blog Posts
       </h2>
       <div className="flex flex-col space-y-3">
-        {blogPosts.map((post) => (
+        {blogPosts.slice(0, 3).map((post) => (
           <BlogPostCard key={post.id} post={post} />
         ))}
       </div>
