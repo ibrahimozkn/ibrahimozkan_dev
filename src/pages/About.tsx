@@ -4,6 +4,7 @@ import TechnologyCard from '../components/project/TechnologyCard';
 import SectionCard from '../components/SectionCard';
 import TimelineItem from '../components/TimelineItem';
 import CodeBlock from '../components/CodeBlock';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 function About() {
   const profileData = {
@@ -17,7 +18,6 @@ function About() {
   return (
     <div className="py-10">
       <div className="container mx-auto flex flex-col items-center justify-center gap-6 px-4">
-        {/* Hero Section */}
         <div className="flex flex-col gap-6 md:flex-row md:items-center">
           <div className="shrink-0 md:w-1/3">
             <img
@@ -49,18 +49,17 @@ function About() {
           </div>
         </div>
 
-        {/* Main Content */}
         <div className="flex w-full gap-6">
           <div className="flex w-2/3 flex-col space-y-5">
-            {/* About Me */}
             <SectionCard title="// About Me">
               <p className="text-lg text-gray-400">
                 I am a software developer with a passion for building web applications.
               </p>
             </SectionCard>
 
-            {/* Tech Stack */}
             <SectionCard title="// Tech Stack">
+              {/* TODO - Make it dynamic*/}
+
               <div className="mt-3 flex space-x-3">
                 <TechnologyCard technology="React" />
                 <TechnologyCard technology="TypeScript" />
@@ -68,8 +67,8 @@ function About() {
               </div>
             </SectionCard>
 
-            {/* Career Milestones */}
             <SectionCard title="// Career Milestones">
+              {/* TODO - Make it dynamic*/}
               <ol className="relative ml-2 border-l border-white/10">
                 <TimelineItem
                   title="Senior Software Engineer"
@@ -91,9 +90,24 @@ function About() {
             </SectionCard>
           </div>
 
-          {/* Profile Code Block */}
-          <div className="flex w-1/3 flex-col">
+          <div className="flex w-1/3 flex-col space-y-5">
             <CodeBlock code={profileData} />
+            <SectionCard title="// Connect">
+              <div className="mt-3 flex flex-col space-y-5">
+                <div className="flex items-center space-x-3 text-xl text-gray-400">
+                  <FaGithub className="" />
+                  <p className="">Github</p>
+                </div>
+                <div className="flex items-center space-x-3 text-xl text-gray-400">
+                  <FaLinkedin className="" />
+                  <p className="">LinkedIn</p>
+                </div>
+                <div className="flex items-center space-x-3 text-xl text-gray-400">
+                  <FaEnvelope className="" />
+                  <p className="">Email</p>
+                </div>
+              </div>
+            </SectionCard>
           </div>
         </div>
       </div>

@@ -11,7 +11,6 @@ export default function CodeBlock({ code, language = 'json' }: CodeBlockProps) {
 
   return (
     <div className="overflow-hidden rounded-lg border border-white/10 bg-white/5 transition-colors hover:bg-white/10">
-      {/* Mac-style window controls */}
       <div className="flex p-3">
         <div className="h-3 w-3 rounded-full bg-red-500"></div>
         <div className="ml-2 h-3 w-3 rounded-full bg-yellow-500"></div>
