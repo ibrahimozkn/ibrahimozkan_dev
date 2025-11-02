@@ -10,7 +10,7 @@ import About from './pages/About';
 function App() {
   return (
     <div className="bg-background-dark min-w-full">
-      <BrowserRouter>
+      <BrowserRouter basename="/ibrahimozkan_dev">
         <Routes>
           <Route
             element={
