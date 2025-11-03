@@ -6,11 +6,12 @@ import data from './assets/data.json';
 import BlogPost from './pages/BlogPost';
 import Projects from './pages/Projects';
 import About from './pages/About';
+import Contact from './pages/Contact';
 
 function App() {
   return (
     <div className="bg-background-dark min-w-full">
-      <BrowserRouter basename="/ibrahimozkan_dev">
+      <BrowserRouter>
         <Routes>
           <Route
             element={
@@ -24,6 +25,7 @@ function App() {
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/projects" element={<Projects projects={data.projects} />} />
             <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
           </Route>
         </Routes>
       </BrowserRouter>
