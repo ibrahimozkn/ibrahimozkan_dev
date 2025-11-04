@@ -2,11 +2,12 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 interface CodeBlockProps {
+  title?: string;
   code: string | object;
   language?: string;
 }
 
-export default function CodeBlock({ code, language = 'json' }: CodeBlockProps) {
+export default function CodeBlock({ title, code, language = 'json' }: CodeBlockProps) {
   const codeString = typeof code === 'string' ? code : JSON.stringify(code, null, 2);
 
   return (
@@ -17,6 +18,8 @@ export default function CodeBlock({ code, language = 'json' }: CodeBlockProps) {
         <div className="ml-2 h-3 w-3 rounded-full bg-green-500"></div>
       </div>
       <div className="px-3 pb-3">
+        {title && <h2 className="mt-2 mb-3 text-xl font-bold text-white">{title}</h2>}
+
         <SyntaxHighlighter
           language={language}
           style={atomOneDark}
