@@ -4,6 +4,7 @@ import TechnologyCard from '../components/project/TechnologyCard';
 import SectionCard from '../components/SectionCard';
 import TimelineItem from '../components/TimelineItem';
 import CodeBlock from '../components/CodeBlock';
+import SocialLink from '../components/SocialLink';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 function About() {
@@ -94,18 +95,9 @@ function About() {
             <CodeBlock code={profileData} />
             <SectionCard title="// Connect">
               <div className="mt-3 flex flex-col space-y-5">
-                <div className="flex items-center space-x-3 text-xl text-gray-400">
-                  <FaGithub className="" />
-                  <p className="">Github</p>
-                </div>
-                <div className="flex items-center space-x-3 text-xl text-gray-400">
-                  <FaLinkedin className="" />
-                  <p className="">LinkedIn</p>
-                </div>
-                <div className="flex items-center space-x-3 text-xl text-gray-400">
-                  <FaEnvelope className="" />
-                  <p className="">Email</p>
-                </div>
+                <SocialLink icon={<FaGithub />} label="Github" />
+                <SocialLink icon={<FaLinkedin />} label="LinkedIn" />
+                <SocialLink icon={<FaEnvelope />} label="Email" />
               </div>
             </SectionCard>
           </div>
