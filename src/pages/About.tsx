@@ -1,10 +1,10 @@
 import photo from '../assets/me_photo.jpg';
 import { Link } from 'react-router-dom';
 import TechnologyCard from '../components/project/TechnologyCard';
-import SectionCard from '../components/SectionCard';
-import TimelineItem from '../components/TimelineItem';
-import CodeBlock from '../components/CodeBlock';
-import SocialLink from '../components/SocialLink';
+import SectionCard from '../components/common/SectionCard';
+import TimelineItem from '../components/common/TimelineItem';
+import CodeBlock from '../components/common/CodeBlock';
+import SocialLink from '../components/social/SocialLink';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 function About() {

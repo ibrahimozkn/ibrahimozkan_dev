@@ -1,8 +1,8 @@
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
-import SectionCard from '../components/SectionCard';
-import CodeBlock from '../components/CodeBlock';
-import ContactForm from '../components/ContactForm';
-import SocialLink from '../components/SocialLink';
+import SectionCard from '../components/common/SectionCard';
+import CodeBlock from '../components/common/CodeBlock';
+import ContactForm from '../components/form/ContactForm';
+import SocialLink from '../components/social/SocialLink';
 
 function Contact() {
   const emailData = {

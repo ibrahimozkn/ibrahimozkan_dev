@@ -1,4 +1,4 @@
-import Hero from '../components/Hero';
+import Hero from '../components/layout/Hero';
 import data from '../assets/data.json';
 import LatestBlogPosts from '../components/blog/LatestBlogPosts';
 import FeaturedProjects from '../components/project/FeaturedProjects';
