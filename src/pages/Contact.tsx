@@ -3,19 +3,47 @@ import SectionCard from '../components/common/SectionCard';
 import CodeBlock from '../components/common/CodeBlock';
 import ContactForm from '../components/form/ContactForm';
 import SocialLink from '../components/social/SocialLink';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
   const emailData = {
     email: 'ibrahim@example.com',
   };
 
-  const handleFormSubmit = (data: {
+  const handleFormSubmit = async (data: {
     name: string;
     email: string;
     subject: string;
     message: string;
-  }) => {
-    console.log('Form submitted:', data);
+  }): Promise<boolean> => {
+    if (data.name === '' || data.email === '' || data.subject === '' || data.message === '') {
+      alert('Please fill in all fields before submitting the form.');
+      return false;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(data.email)) {
+      alert('Please enter a valid email address.');
+      return false;
+    }
+
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        data,
+        {
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        },
+      );
+
+      alert('Message sent successfully!');
+      return true;
+    } catch (error) {
+      alert('Failed to send message. Please try again later.');
+      console.error('EmailJS Error:', error);
+      return false;
+    }
   };
 
   return (

@@ -3,7 +3,7 @@ import FormInput from './FormInput';
 import FormTextarea from './FormTextarea';
 
 interface ContactFormProps {
-  onSubmit?: (data: FormData) => void;
+  onSubmit?: (data: FormData) => boolean | Promise<boolean>;
 }
 
 interface FormData {
@@ -29,9 +29,18 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    onSubmit?.(formData);
+    const result = await onSubmit?.(formData);
+
+    if (result) {
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+      });
+    }
   };
 
   return (

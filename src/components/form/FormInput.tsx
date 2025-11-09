@@ -23,7 +23,7 @@ export default function FormInput({
         {label}
       </label>
       <input
-        className="focus:ring-primary mt-1 w-full rounded-md border border-gray-700 bg-gray-800 p-2 text-white focus:ring-2 focus:outline-none"
+        className="focus:ring-primary mt-1 w-full rounded-md border border-white/20 bg-white/10 p-2 text-white focus:ring-2 focus:outline-none"
         type={type}
         id={id}
         placeholder={placeholder}

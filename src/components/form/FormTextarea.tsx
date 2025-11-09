@@ -25,7 +25,7 @@ export default function FormTextarea({
       <textarea
         id={id}
         rows={rows}
-        className="focus:ring-primary mt-1 w-full resize-y rounded-md border border-gray-700 bg-gray-800 p-2 text-white focus:ring-2 focus:outline-none"
+        className="focus:ring-primary mt-1 w-full resize-y rounded-md border border-white/20 bg-white/10 p-2 text-white focus:ring-2 focus:outline-none"
         placeholder={placeholder}
         value={value}
         onChange={onChange}
