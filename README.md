@@ -1,155 +1,146 @@
-# ibrahimozkan.dev
+# ibrahimozkan.dev 🚀
 
-A modern, performant personal portfolio website built with React, TypeScript, and Vite. Showcase your projects, blog posts, and professional journey with a sleek, responsive design.
+My personal portfolio website that I built during a random burst of inspiration (read: boredom). What started as "let me just mess around with React for a bit" turned into a full-fledged portfolio site.
 
-## ✨ Features
+## ✨ What I Built
 
-- **Responsive Design** - Mobile-first approach with Tailwind CSS
-- **Blog System** - Write and publish blog posts with Markdown support
-- **Project Showcase** - Highlight your featured projects with descriptions and technologies
-- **Dark Mode Ready** - Built with a dark theme foundation
-- **Fast Performance** - Optimized with Vite and React Compiler
-- **Type-Safe** - Full TypeScript support for reliability
-- **Code Syntax Highlighting** - Beautiful code blocks in blog posts
-- **Modern Stack** - Latest versions of React (19), React Router (7), and supporting libraries
+- **Responsive Design** - Looks good on your phone, tablet, or that massive monitor you have
+- **Blog System** - Write posts in Markdown because I'm lazy and Markdown is easy
+- **Project Showcase** - All my cool projects in one place
+- **Dark Theme** - Because dark mode is superior (fight me)
+- **Contact Form** - So you can actually reach out to me
 
-## 🚀 Quick Start
+## 🛠️ Tech Stack
+
+Built with some awesome technologies:
+
+- **[React 19](https://react.dev/)** - The UI library we all know and love
+- **[TypeScript](https://www.typescriptlang.org/)** - JavaScript, but make it type-safe
+- **[Vite 7](https://vite.dev/)** - Super fast build tool and dev server
+- **[Tailwind CSS 4](https://tailwindcss.com/)** - Utility-first CSS framework
+- **[React Router 7](https://reactrouter.com/)** - Client-side routing
+- **[React Markdown](https://github.com/remarkjs/react-markdown)** - Markdown rendering with GFM support
+- **[React Syntax Highlighter](https://github.com/react-syntax-highlighter/react-syntax-highlighter)** - Beautiful code blocks
+- **[React Icons](https://react-icons.github.io/react-icons/)** - Icon library
+- **[ESLint](https://eslint.org/)** & **[Prettier](https://prettier.io/)** - Keep my code clean and consistent
+
+## 🚀 Getting Started
+
+Want to run this locally? Here's how:
 
 ### Prerequisites
 
-- Node.js 16+
-- npm or yarn
+- Node.js (16 or higher)
+- npm or yarn (I use npm, but you do you)
 
 ### Installation
 
-1. Clone the repository:
+1. **Clone this repo:**
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/ibrahimozkn/ibrahimozkan_dev.git
 cd ibrahimozkan_dev
 ```
 
-2. Install dependencies:
+2. **Install dependencies:**
 
 ```bash
 npm install
 ```
 
-3. Start the development server:
+3. **Fire up the dev server:**
 
 ```bash
 npm run dev
 ```
 
-The site will be available at `http://localhost:5173`
+4. **Open your browser:**
 
-## 📦 Available Scripts
+Navigate to `http://localhost:5173` and you should see the site running!
 
-- `npm run dev` - Start the development server with HMR
-- `npm run build` - Build for production with TypeScript checking
-- `npm run preview` - Preview the production build
-- `npm run lint` - Run ESLint to check code quality
-- `npm run format` - Format code with Prettier
-- `npm run format:check` - Check code formatting without changes
+## Screenshots
+
+### Home Page
+
+![Home Page](./screenshots/home.png)
+_Landing page with hero section and featured content_
+
+### Projects
+
+![Projects Page](./screenshots/projects.png)
+_Showcase of all my projects with tech stacks_
+
+### Blog
+
+![Blog Page](./screenshots/blog.png)
+_Blog posts listing with previews_
+
+### About
+
+![About Page](./screenshots/about.png)
+_My professional journey and background_
+
+## 📜 Available Scripts
+
+Here's what you can do:
+
+- `npm run dev` - Start development server with hot reload
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Check for code issues
+- `npm run format` - Auto-format code with Prettier
+- `npm run format:check` - Check formatting without making changes
 
 ## 📁 Project Structure
 
 ```
 src/
-├── pages/              # Route pages
-│   ├── Home.tsx
-│   ├── About.tsx
-│   ├── Projects.tsx
-│   ├── Blog.tsx
-│   └── BlogPost.tsx
+├── pages/              # All the main pages
+│   ├── Home.tsx        # Landing page
+│   ├── About.tsx       # About me
+│   ├── Projects.tsx    # Projects showcase
+│   ├── Blog.tsx        # Blog posts listing
+│   ├── BlogPost.tsx    # Individual blog post
+│   └── Contact.tsx     # Contact form
 ├── components/         # Reusable components
-│   ├── Layout.tsx
-│   ├── Navbar.tsx
-│   ├── Footer.tsx
-│   ├── Hero.tsx
-│   ├── SectionCard.tsx
-│   ├── TimelineItem.tsx
-│   ├── CodeBlock.tsx
-│   ├── blog/
-│   └── project/
-├── assets/            # Static assets and data
-│   ├── data.json      # Blog posts and projects data
-│   └── blog_posts/    # Markdown blog posts
-├── lib/               # Utility libraries
-├── utils/             # Helper functions
-└── types/             # TypeScript type definitions
+│   ├── layout/         # Layout components (Navbar, Footer, etc.)
+│   ├── blog/           # Blog-related components
+│   ├── project/        # Project-related components
+│   ├── form/           # Form components
+│   ├── social/         # Social media links
+│   └── common/         # Shared components
+├── assets/
+│   ├── data.json       # Blog posts and projects data
+│   └── blog_posts/     # Markdown blog posts
+├── lib/                # Utility libraries
+├── utils/              # Helper functions
+└── types/              # TypeScript definitions
 ```
 
 ## 🎨 Customization
 
 ### Adding Blog Posts
 
-Blog posts are stored in `src/assets/blog_posts/` as Markdown files and referenced in `src/assets/data.json`.
+1. Create a new `.md` file in `src/assets/blog_posts/`
+2. Add the post metadata to `src/assets/data.json`
+3. Done! The blog system will pick it up automatically
 
 ### Adding Projects
 
-Update the `projects` array in `src/assets/data.json` to add new projects to your portfolio.
+Just update the `projects` array in `src/assets/data.json` with your project details.
 
-## 🔧 Tech Stack
+## Deployment
 
-- **Frontend Framework**: React 19
-- **Language**: TypeScript
-- **Build Tool**: Vite 7
-- **Styling**: Tailwind CSS 4 with Typography plugin
-- **Routing**: React Router DOM 7
-- **Markdown**: React Markdown with GFM support
-- **Code Highlighting**: React Syntax Highlighter
-- **Icons**: React Icons
-- **Code Quality**: ESLint, Prettier
-- **Compiler**: React Compiler (experimental)
-
-## 🎯 Pages
-
-- **Home** - Landing page with hero section
-- **About** - Your professional biography and background
-- **Projects** - Showcase of your work and projects
-- **Blog** - List of blog posts with previews
-- **Blog Post** - Individual blog post with full content
-
-## 📝 Styling
-
-This project uses Tailwind CSS v4 with:
-
-- Custom dark theme configuration
-- Tailwind Typography plugin for content-rich pages
-- Responsive design utilities
-- Custom color palette and spacing
-
-## 🚀 Deployment
-
-Build the project for production:
+Build it:
 
 ```bash
 npm run build
 ```
 
-The optimized build will be in the `dist/` directory, ready to deploy to:
+The `dist/` folder contains your production-ready site. Deploy it anywhere.
 
-- Vercel
-- Netlify
-- GitHub Pages
-- Any static hosting service
+## 🤔 Why I Built This
 
-## 📋 Code Quality
+Honestly? I was bored one weekend and thought "I should probably have a proper portfolio site instead of just a GitHub profile." What started as a simple landing page evolved into this full-featured portfolio with a blog, project showcase, and all the bells and whistles.
 
-This project maintains high code quality standards:
-
-- **ESLint** - Configured for React and TypeScript best practices
-- **Prettier** - Automatic code formatting
-- **TypeScript** - Strict type checking enabled
-
-Run quality checks:
-
-```bash
-npm run lint        # Check for linting issues
-npm run format:check # Check formatting
-```
-
----
-
-**Happy building! 🚀**
+It's also a great excuse to play with React and learn new things.
