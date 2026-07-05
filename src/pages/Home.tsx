@@ -1,5 +1,5 @@
 import Hero from '../components/layout/Hero';
-import data from '../assets/data.json';
+import { portfolio } from '../data/portfolio';
 import LatestBlogPosts from '../components/blog/LatestBlogPosts';
 import FeaturedProjects from '../components/project/FeaturedProjects';
 
@@ -8,9 +8,11 @@ function Home() {
     <div className="flex flex-col space-y-20 p-10">
       <Hero />
       <FeaturedProjects
-        projects={data.projects.filter((project) => project.featured).slice(0, 2)}
+        projects={portfolio.projects.filter((p) => p.featured).slice(0, 2)}
       />
-      <LatestBlogPosts blogPosts={data.blogPosts} />
+      {portfolio.blogPosts.length > 0 && (
+        <LatestBlogPosts blogPosts={portfolio.blogPosts} />
+      )}
     </div>
   );
 }

@@ -1,88 +1,354 @@
 {
+  "profile": {
+    "name": "İbrahim Özkan",
+    "firstName": "İbrahim",
+    "lastName": "Özkan",
+    "initials": "IO",
+    "handle": "ibrahimoezkan.com",
+    "title": "Software Engineer",
+    "tagline": "M.Sc. student at HPI Potsdam building React/TypeScript, Flutter, and applied-AI systems across SAP Signavio, digital health research, and startup products.",
+    "summary": "M.Sc. student at HPI Potsdam with 4+ years building software across SAP Signavio, digital health research, startup products, and mobile ERP pilots. Strong in React/TypeScript micro-frontends, Flutter, backend APIs, testing, and applied AI systems. Co-founded Gatsot: €30K pre-seed, 5,500+ users, and 18,000+ processed receipts.",
+    "location": "Potsdam, Germany",
+    "availability": "Open to working student, junior, and graduate roles in Berlin, Potsdam, Cyprus, or remote within Germany/EU."
+  },
+  "contact": {
+    "email": "ibrahim.ozkn@outlook.com"
+  },
+  "socials": [
+    {
+      "kind": "github",
+      "label": "GitHub",
+      "href": "https://github.com/ibrahimozkn"
+    },
+    {
+      "kind": "linkedin",
+      "label": "LinkedIn",
+      "href": "https://linkedin.com/in/ibrahim-ozkan"
+    },
+    {
+      "kind": "website",
+      "label": "Website",
+      "href": "https://ibrahimoezkan.com"
+    },
+    {
+      "kind": "email",
+      "label": "Email",
+      "href": "mailto:ibrahim.ozkn@outlook.com"
+    }
+  ],
+  "skills": {
+    "highlight": [
+      "TypeScript",
+      "React",
+      "Flutter",
+      "Python",
+      "FastAPI",
+      "GraphQL"
+    ],
+    "languages": ["TypeScript/JavaScript", "Python", "Dart", "PHP", "SQL"],
+    "frontend": [
+      "React",
+      "Module Federation",
+      "Webpack",
+      "GraphQL/Apollo",
+      "Cypress",
+      "Vitest"
+    ],
+    "backendAndApis": ["Node.js", "FastAPI", "Laravel", "REST APIs"],
+    "aiAndTooling": [
+      "LLM applications",
+      "Model Context Protocol (MCP)",
+      "PydanticAI",
+      "multi-agent pipelines",
+      "OCR"
+    ],
+    "mobile": ["Flutter", "Dart", "SQLite offline sync"],
+    "databases": ["PostgreSQL", "MySQL", "SQLite", "Supabase"],
+    "devops": ["Docker", "CI/CD (GitHub Actions)", "Nginx", "Git/GitHub"],
+    "familiar": [
+      "Node.js",
+      "Docker",
+      "CI/CD with GitHub Actions",
+      "Nginx",
+      "PostgreSQL",
+      "MySQL",
+      "cloud OCR",
+      "LLM applications",
+      "Model Context Protocol (MCP)",
+      "multi-agent pipelines",
+      "barcode scanning",
+      "thermal printing",
+      "Odoo workflows",
+      "Swift",
+      "SwiftUI",
+      "iOS/watchOS development",
+      "Playwright",
+      "Telegram bot development",
+      "HTMX",
+      "Flutter BLoC",
+      "Riverpod",
+      "Melos",
+      "Firebase Analytics/Messaging/Crashlytics",
+      "Sentry",
+      "Fastlane",
+      "app-store release workflows"
+    ]
+  },
+  "experience": [
+    {
+      "company": "SAP Labs Berlin",
+      "location": "Berlin, Germany",
+      "title": "SAP iXp Intern, Process Value Analysis",
+      "start": "04/2026",
+      "end": "Present",
+      "current": true,
+      "bullets": [
+        "Worked on a React/TypeScript micro-frontend for SAP Signavio's process-analysis product area (GraphQL/Apollo, Module Federation v2) and shipped Export Value Cases to production with Vitest and Cypress coverage in CI.",
+        "Debugged release-blocking integration issues that did not reproduce in the isolated development app, requiring investigation inside the integrated shell host that runs multiple remote micro-frontends before the May release.",
+        "Identified a gap in local integration testing and built a zero-dependency Node.js workflow that runs local micro-frontend code inside the integrated shell host, helping reproduce bugs hidden by local-only setups.",
+        "Coordinated fixes across engineering and design stakeholders: triaged Jira reports, consulted with other micro-frontend teams, aligned UI/UX details with designers, and helped choose implementation paths for production fixes.",
+        "Built an AI agent setup management marketplace and PR-based sync workflow (GitHub Actions, GitHub App installation-token auth, Node.js) to propagate shared skills, MCP server configs, hooks, and workflows across team repositories through reviewable update PRs."
+      ]
+    },
+    {
+      "company": "Hasso Plattner Institute, Digital Health Center",
+      "location": "Potsdam, Germany",
+      "title": "Student Research Assistant",
+      "start": "05/2024",
+      "end": "04/2026",
+      "current": false,
+      "bullets": [
+        "Built and shipped features for StudyU, an open-source digital health platform (Flutter, Supabase) used in N-of-1 clinical trials in personalized medicine research.",
+        "Built and shipped StudyU AI, a full-stack AI assistant for study design (FastAPI, PydanticAI, React) with fault-tolerant LLM execution and structured output validation.",
+        "Designed a multi-agent pipeline with a custom MCP tool that grounds agents on PubMed evidence and extracts structured clinical trial components.",
+        "Engineered Fitbit sensor-data integration and statistical reporting for N-of-1 trial result visualizations."
+      ]
+    },
+    {
+      "company": "Gatsot",
+      "location": "Cyprus & Remote",
+      "title": "Co-Founder & CTO",
+      "start": "09/2024",
+      "end": "Present",
+      "current": true,
+      "bullets": [
+        "Co-founded Gatsot (gatsot.app), a price-comparison platform with 5,500+ organic users, 18,000+ processed receipts, and current growth of ~1,500 receipts and ~500 new users/month.",
+        "Raised €30,000 pre-seed funding through the YAGA entrepreneurship grant and joined the Startups4Peace 2025 accelerator.",
+        "Built the receipt-processing pipeline (Laravel, cloud OCR, LLMs) with validation for varied Turkish receipt formats and downstream product-price matching.",
+        "Ran B2B product discovery with wholesale managers to shape a market-insight analytics dashboard roadmap."
+      ]
+    },
+    {
+      "company": "Niyel Technologies LTD",
+      "location": "Nicosia, Cyprus",
+      "title": "Software Engineer",
+      "start": "10/2021",
+      "end": "09/2023",
+      "current": false,
+      "bullets": [
+        "Built a pilot offline-first Flutter mobile ERP for Odoo workflows across warehouse, sales, invoicing, and payments.",
+        "Implemented SQLite offline sync with periodic reconciliation and conflict handling for field work during network outages.",
+        "Integrated barcode scanning and thermal printing to reduce manual entry in warehouse and sales workflows."
+      ]
+    },
+    {
+      "company": "Niyel Technologies LTD",
+      "location": "Nicosia, Cyprus",
+      "title": "Internship",
+      "start": "09/2021",
+      "end": "10/2021",
+      "current": false,
+      "bullets": [
+        "Delivered an admin and company management panel for the Kimden service marketplace (HTML5, CSS3, JavaScript, Bootstrap), covering project management, application review, and live analytics.",
+        "Built a Flutter mobile app with Google Maps, geolocation, multi-parameter filtering, and REST API integrations for construction-project discovery in Northern Cyprus."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "University of Potsdam (Hasso Plattner Institute)",
+      "location": "Potsdam, Germany",
+      "degree": "M.Sc. Software Systems Engineering",
+      "grade": "CGPA 1.9",
+      "start": "10/2023",
+      "end": "Present",
+      "current": true
+    },
+    {
+      "school": "Middle East Technical University",
+      "location": "Morphou, Cyprus",
+      "degree": "B.Sc. Computer Engineering",
+      "grade": "CGPA 3.19/4.00 ≈ 2.2",
+      "start": "09/2019",
+      "end": "07/2023",
+      "current": false
+    }
+  ],
+  "publications": [
+    {
+      "title": "NOF1-BCD: A Framework for Causal Estimates with N-of-1 Bayesian Digital Twins",
+      "venue": "SD4H Workshop, ICML 2026 (Poster)",
+      "date": "2026-05-23",
+      "authors": [
+        "Juliana Schneider",
+        "Johannes E. Vedder",
+        "İbrahim Özkan",
+        "Babajide A. Owoyele",
+        "Stefan Konigorski"
+      ],
+      "description": "Individual-level causal inference combining LLM-elicited priors with Bayesian Digital Twins for N-of-1 treatment effect estimation."
+    },
+    {
+      "title": "Personalization of Large Foundation Models for Health Interventions",
+      "venue": "AAAI 2026 Workshop on Personalization of Foundation Models (PerFM), arXiv:2601.03482",
+      "date": "2025-10-18",
+      "authors": [
+        "Stefan Konigorski",
+        "Johannes E. Vedder",
+        "Babajide A. Owoyele",
+        "İbrahim Özkan"
+      ],
+      "link": "https://arxiv.org/abs/2601.03482",
+      "description": "Proposes hybrid framework combining foundation models for hypothesis generation with adaptive N-of-1 trials for causal validation in personalized medicine."
+    }
+  ],
+  "languages": [
+    {
+      "language": "Turkish",
+      "level": "Native"
+    },
+    {
+      "language": "English",
+      "level": "C2 (fluent)"
+    },
+    {
+      "language": "German",
+      "level": "A2 (currently learning)"
+    }
+  ],
+  "interests": [
+    "Entrepreneurship",
+    "Product building",
+    "Gaming",
+    "Specialty coffee",
+    "Drumming",
+    "Rock/metal music"
+  ],
   "projects": [
     {
       "id": 1,
-      "title": "E-Commerce Platform",
-      "description": "A full-stack e-commerce platform with real-time inventory management, payment processing, and admin dashboard. Features include product search, filtering, cart management, and order tracking.",
-      "technologies": ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
-      "link": "https://ecommerce-demo.example.com",
-      "githubLink": "https://github.com/ibrahimozkan/ecommerce-platform",
-      "demoLink": "https://ecommerce-demo.example.com",
+      "title": "SAP Signavio Export Value Cases",
+      "description": "Production React/TypeScript micro-frontend feature for SAP Signavio using GraphQL/Apollo and Module Federation v2, covered by Vitest and Cypress in CI.",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "GraphQL/Apollo",
+        "Module Federation v2",
+        "Vitest",
+        "Cypress"
+      ],
       "featured": true
     },
     {
       "id": 2,
-      "title": "AI Chat Application",
-      "description": "Real-time chat application powered by AI with natural language processing. Supports group chats, file sharing, and intelligent message suggestions using GPT-4.",
-      "technologies": ["Next.js", "TypeScript", "OpenAI API", "Socket.io", "PostgreSQL"],
-      "link": "https://ai-chat.example.com",
-      "githubLink": "https://github.com/ibrahimozkan/ai-chat-app",
-      "demoLink": "https://ai-chat.example.com",
+      "title": "StudyU AI",
+      "description": "Full-stack AI assistant for study design with fault-tolerant LLM execution, structured output validation, PubMed-grounded agents, and a custom MCP tool.",
+      "technologies": [
+        "FastAPI",
+        "PydanticAI",
+        "React",
+        "LLM applications",
+        "Model Context Protocol (MCP)",
+        "multi-agent pipelines"
+      ],
       "featured": true
     },
     {
       "id": 3,
-      "title": "Project Management Tool",
-      "description": "Collaborative project management tool with kanban boards, gantt charts, time tracking, and team collaboration features. Built for remote teams.",
-      "technologies": ["Vue.js", "Firebase", "Vuetify", "Chart.js"],
-      "link": "https://pm-tool.example.com",
-      "githubLink": "https://github.com/ibrahimozkan/project-management",
-      "demoLink": "https://pm-tool.example.com",
+      "title": "Gatsot",
+      "description": "Cyprus grocery price-comparison app where users scan receipts, OCR/AI extracts products and prices, and community data powers supermarket comparisons.",
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "Laravel",
+        "cloud OCR",
+        "LLMs",
+        "SQLite"
+      ],
+      "link": "https://gatsot.app",
       "featured": true
     },
     {
       "id": 4,
-      "title": "Weather Forecast Dashboard",
-      "description": "Interactive weather dashboard with real-time forecasts, historical data visualization, and location-based alerts. Integrates multiple weather APIs for accuracy.",
-      "technologies": ["React", "TypeScript", "D3.js", "Weather API", "Tailwind CSS"],
-      "link": "https://weather-dash.example.com",
-      "githubLink": "https://github.com/ibrahimozkan/weather-dashboard",
-      "featured": true
+      "title": "StudyU platform",
+      "description": "Open-source digital health platform for designing and conducting N-of-1 trials, with participant apps, researcher tools, shared Flutter packages, and Supabase backend.",
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "Melos",
+        "FVM",
+        "Supabase",
+        "PostgreSQL"
+      ],
+      "githubLink": "https://github.com/hpi-studyu/studyu",
+      "featured": false
     },
     {
       "id": 5,
-      "title": "Fitness Tracker App",
-      "description": "Mobile-first fitness tracking application with workout plans, nutrition logging, progress tracking, and social features. Syncs with wearable devices.",
-      "technologies": ["React Native", "Redux", "Express", "MySQL", "AWS"],
-      "link": "https://fitness-tracker.example.com",
-      "demoLink": "https://fitness-tracker.example.com",
-      "featured": true
+      "title": "Integrated shell host workflow",
+      "description": "Zero-dependency Node.js workflow that runs local micro-frontend code inside the integrated shell host to reproduce release-blocking integration bugs.",
+      "technologies": ["Node.js", "Module Federation", "React", "TypeScript"],
+      "featured": false
     },
     {
       "id": 6,
-      "title": "Blog CMS Platform",
-      "description": "Headless CMS for bloggers with markdown support, SEO optimization, analytics, and multi-author capabilities. Clean and intuitive admin interface.",
-      "technologies": ["Next.js", "GraphQL", "Prisma", "PostgreSQL", "Vercel"],
-      "link": "https://blog-cms.example.com",
-      "githubLink": "https://github.com/ibrahimozkan/blog-cms",
-      "demoLink": "https://blog-cms.example.com",
-      "featured": true
+      "title": "Offline-first Flutter ERP",
+      "description": "Mobile ERP pilot for Odoo workflows across warehouse, sales, invoicing, and payments, with offline sync, reconciliation, conflict handling, barcode scanning, and printing.",
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "SQLite",
+        "barcode scanning",
+        "thermal printing",
+        "Odoo workflows"
+      ],
+      "featured": false
+    },
+    {
+      "id": 7,
+      "title": "BlinkRead RSVP reader",
+      "description": "Offline-first RSVP reading app for iPhone and Apple Watch with shared Swift domain models, reading engine, timing, rewind, and text-processing pipeline.",
+      "technologies": ["Swift", "SwiftUI", "iOS/watchOS development"],
+      "featured": false
+    },
+    {
+      "id": 8,
+      "title": "auto-applier",
+      "description": "Personal job-application assistant that scrapes job boards, stores runs in SQLite, supports Telegram job selection, and produces tailored LaTeX résumé and cover-letter PDFs.",
+      "technologies": [
+        "Python",
+        "Playwright",
+        "SQLite",
+        "Telegram bot development",
+        "HTMX",
+        "LLM applications"
+      ],
+      "featured": false
+    },
+    {
+      "id": 9,
+      "title": "Kimden service marketplace tooling",
+      "description": "Admin and company management panel plus Flutter mobile app for construction-project discovery in Northern Cyprus with maps, geolocation, filtering, and REST APIs.",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Bootstrap",
+        "Flutter",
+        "REST APIs"
+      ],
+      "featured": false
     }
   ],
-  "blogPosts": [
-    {
-      "id": 1,
-      "title": "Building Scalable React Applications with TypeScript",
-      "date": "2024-10-15",
-      "summary": "Learn best practices for structuring large-scale React applications with TypeScript, including type safety patterns, component design, and state management strategies."
-    },
-    {
-      "id": 2,
-      "title": "Modern CSS Techniques with Tailwind CSS",
-      "date": "2024-10-22",
-      "summary": "Explore advanced Tailwind CSS patterns, custom configurations, and how to build responsive designs efficiently without writing custom CSS."
-    },
-    {
-      "id": 3,
-      "title": "Optimizing Web Performance: A Complete Guide",
-      "date": "2024-10-28",
-      "summary": "Deep dive into web performance optimization techniques including code splitting, lazy loading, image optimization, and Core Web Vitals improvements."
-    },
-    {
-      "id": 4,
-      "title": "Understanding React Server Components",
-      "date": "2024-11-01",
-      "summary": "A comprehensive guide to React Server Components, their benefits, use cases, and how they change the way we think about building React applications."
-    }
-  ]
+  "blogPosts": []
 }

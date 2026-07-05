@@ -1,0 +1,43 @@
+# İbrahim Özkan
+
+> Software engineer, M.Sc. student at HPI Potsdam. React/TypeScript, Flutter, applied-AI. Experience across SAP Signavio, digital health research at HPI, and startup products (Gatsot).
+
+## Contact
+
+- Email: ibrahim.ozkn@outlook.com
+
+## Links
+
+- [GitHub](https://github.com/ibrahimozkn)
+- [LinkedIn](https://linkedin.com/in/ibrahim-ozkan)
+- [Website](https://ibrahimoezkan.com)
+
+## Experience
+
+- SAP iXp Intern, Process Value Analysis @ SAP Labs Berlin — 04/2026–Present. React/TypeScript micro-frontend for SAP Signavio (GraphQL/Apollo, Module Federation v2); shipped Export Value Cases to production with Vitest + Cypress in CI.
+- Student Research Assistant @ Hasso Plattner Institute, Digital Health Center — 05/2024–04/2026. Built StudyU features and StudyU AI (FastAPI, PydanticAI, React).
+- Co-Founder & CTO @ Gatsot — 09/2024–Present. Cyprus grocery price-comparison platform; €30K pre-seed, 5,500+ users, 18,000+ processed receipts.
+- Software Engineer @ Niyel Technologies LTD — 10/2021–09/2023. Offline-first Flutter mobile ERP for Odoo workflows.
+
+## Featured projects
+
+- [Gatsot](https://gatsot.app) — Turkish/Cypriot grocery price-comparison app (Flutter + Laravel + OCR/LLM).
+- StudyU AI — full-stack AI assistant for N-of-1 study design (FastAPI, PydanticAI, React, PubMed-grounded MCP tool).
+- SAP Signavio Export Value Cases — production React/TypeScript feature in a micro-frontend with GraphQL/Apollo and Module Federation v2.
+
+## Publications
+
+- NOF1-BCD: A Framework for Causal Estimates with N-of-1 Bayesian Digital Twins — SD4H Workshop, ICML 2026 (Poster).
+- [Personalization of Large Foundation Models for Health Interventions](https://arxiv.org/abs/2601.03482) — AAAI 2026 PerFM Workshop, arXiv:2601.03482.
+
+## Skills
+
+- Languages: TypeScript/JavaScript, Python, Dart, PHP, SQL
+- Frontend: React, Module Federation, Webpack, GraphQL/Apollo, Cypress, Vitest
+- Backend: Node.js, FastAPI, Laravel
+- AI: LLMs, Model Context Protocol (MCP), PydanticAI, multi-agent pipelines, OCR
+- Mobile: Flutter, Dart, SQLite offline sync
+
+## AI usage policy
+
+This site permits: indexing by search engines, and retrieval by answer-engine agents that fetch on user request (e.g. ChatGPT browsing, Perplexity user fetches). This site does not permit: bulk scraping for LLM training. See /robots.txt.

@@ -1,14 +1,25 @@
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
+import type { ReactNode } from 'react';
 import SectionCard from '../components/common/SectionCard';
 import CodeBlock from '../components/common/CodeBlock';
 import ContactForm from '../components/form/ContactForm';
 import SocialLink from '../components/social/SocialLink';
 import emailjs from '@emailjs/browser';
+import { portfolio } from '../data/portfolio';
 
 function Contact() {
-  const emailData = {
-    email: 'ibrahim@example.com',
+  const { contact, socials } = portfolio;
+  const emailData = { email: contact.email };
+
+  const socialIcon: Record<Exclude<Social['kind'], 'website'>, ReactNode> = {
+    github: <FaGithub />,
+    linkedin: <FaLinkedin />,
+    email: <FaEnvelope />,
   };
+
+  const visibleSocials = socials.filter(
+    (s): s is Social & { kind: Exclude<Social['kind'], 'website'> } => s.kind !== 'website',
+  );
 
   const handleFormSubmit = async (data: {
     name: string;
@@ -54,9 +65,9 @@ function Contact() {
       <div className="flex flex-col space-y-5 md:basis-1/3">
         <SectionCard title="// Find me on web">
           <div className="mt-3 flex flex-col space-y-5">
-            <SocialLink icon={<FaGithub />} label="Github" />
-            <SocialLink icon={<FaLinkedin />} label="LinkedIn" />
-            <SocialLink icon={<FaEnvelope />} label="Email" />
+            {visibleSocials.map(s => (
+              <SocialLink key={s.kind} icon={socialIcon[s.kind]} label={s.label} href={s.href} />
+            ))}
           </div>
         </SectionCard>
         <CodeBlock code={emailData} title="// Or send me an email" />

@@ -1,10 +1,10 @@
 import ProjectCard from '../components/project/ProjectCard';
 
-interface ProjectsProps {
-  projects: Project[];
-}
 
-function Projects({ projects }: ProjectsProps) {
+import { portfolio } from '../data/portfolio';
+
+function Projects() {
+  const { projects } = portfolio;
   return (
     <div className="flex flex-col p-5">
       <h2 className="text-3xl font-bold text-white">

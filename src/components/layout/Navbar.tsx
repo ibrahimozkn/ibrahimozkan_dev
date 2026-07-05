@@ -1,9 +1,11 @@
 import { Link, NavLink } from 'react-router-dom';
+import { portfolio } from '../../data/portfolio';
 
 function Navbar() {
+  const { initials } = portfolio.profile;
+
   const navLinkClass = ({ isActive }: { isActive: boolean }) =>
-    `font-bold text-white transition-colors duration-300 hover:border-b ${
-      isActive ? 'text-primary border-b border-primary' : 'hover:text-primary'
+    `font-bold text-white transition-colors duration-300 hover:border-b ${isActive ? 'text-primary border-b border-primary' : 'hover:text-primary'
     }`;
 
   return (
@@ -11,12 +13,10 @@ function Navbar() {
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <Link to="/" className="text-primary text-xl font-bold">
-            &lt;IO&gt;
+            &lt;{initials}&gt;
           </Link>
           <Link to="/" className="font-bold text-white uppercase">
-            <span className="text-primary font-extrabold">i</span>brahim
-            <span className="text-primary font-extrabold">o</span>
-            zkan.dev
+            <span className="text-primary font-extrabold">I</span>brahim Ozkan
           </Link>
         </div>
         <div className="flex items-center space-x-5">

@@ -1,4 +1,5 @@
 import photo from '../assets/me_photo.jpg';
+import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import TechnologyCard from '../components/project/TechnologyCard';
 import SectionCard from '../components/common/SectionCard';
@@ -6,15 +7,50 @@ import TimelineItem from '../components/common/TimelineItem';
 import CodeBlock from '../components/common/CodeBlock';
 import SocialLink from '../components/social/SocialLink';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { portfolio } from '../data/portfolio';
+
+const cmpMonthYear = (a: string, b: string) => {
+  const [am, ay] = a.split('/').map(Number);
+  const [bm, by] = b.split('/').map(Number);
+  return ay === by ? am - bm : ay - by;
+};
 
 function About() {
+  const { profile, contact, skills, experience, education, socials } = portfolio;
+
   const profileData = {
-    name: 'Ibrahim Ozkan',
-    role: 'Software Developer',
-    interests: ['Web Development', 'Open Source', 'UI/UX Design'],
-    isAvailable: true,
-    getInTouch: 'ibrahim@example.com',
+    name: profile.name,
+    role: profile.title,
+    availability: profile.availability,
+    email: contact.email,
   };
+
+  const milestones = [
+    ...experience.map(e => ({
+      title: `${e.title} @ ${e.company}`,
+      subtitle: `${e.location} | ${e.start} – ${e.end}`,
+      description: e.bullets[0] ?? '',
+      current: e.current,
+      sortKey: e.start,
+    })),
+    ...education.map(e => ({
+      title: e.degree,
+      subtitle: `${e.school} | ${e.start} – ${e.end}${e.grade ? ` | ${e.grade}` : ''}`,
+      description: '',
+      current: e.current,
+      sortKey: e.start,
+    })),
+  ].sort((a, b) => cmpMonthYear(b.sortKey, a.sortKey));
+
+  const socialIcon: Record<Exclude<Social['kind'], 'website'>, ReactNode> = {
+    github: <FaGithub />,
+    linkedin: <FaLinkedin />,
+    email: <FaEnvelope />,
+  };
+
+  const visibleSocials = socials.filter(
+    (s): s is Social & { kind: Exclude<Social['kind'], 'website'> } => s.kind !== 'website',
+  );
 
   return (
     <div className="py-10">
@@ -28,11 +64,9 @@ function About() {
           </div>
           <div className="flex flex-col gap-6 md:w-2/3 md:justify-center">
             <h1 className="text-6xl font-bold text-white">
-              <span className="text-primary">$</span> [init] Loading profile for: Ibrahim Ozkan...
+              <span className="text-primary">$</span> [init] Loading profile for: {profile.name}...
             </h1>
-            <p className="mb-4 text-lg text-gray-400">
-              I am a software developer with a passion for building web applications.
-            </p>
+            <p className="mb-4 text-lg text-gray-400">{profile.summary}</p>
             <div className="flex space-x-5">
               <Link
                 to={'/projects'}
@@ -53,40 +87,28 @@ function About() {
         <div className="flex w-full gap-6">
           <div className="flex w-2/3 flex-col space-y-5">
             <SectionCard title="// About Me">
-              <p className="text-lg text-gray-400">
-                I am a software developer with a passion for building web applications.
-              </p>
+              <p className="text-lg text-gray-400">{profile.summary}</p>
             </SectionCard>
 
             <SectionCard title="// Tech Stack">
-              {/* TODO - Make it dynamic*/}
-
               <div className="mt-3 flex space-x-3">
-                <TechnologyCard technology="React" />
-                <TechnologyCard technology="TypeScript" />
-                <TechnologyCard technology="Tailwind CSS" />
+                {skills.highlight.map(t => (
+                  <TechnologyCard key={t} technology={t} />
+                ))}
               </div>
             </SectionCard>
 
             <SectionCard title="// Career Milestones">
-              {/* TODO - Make it dynamic*/}
               <ol className="relative ml-2 border-l border-white/10">
-                <TimelineItem
-                  title="Senior Software Engineer"
-                  subtitle="Tech Solutions Inc. | 2021 - Present"
-                  description="Leading the development of a next-generation cloud platform, focusing on scalability and performance."
-                  badge="Current"
-                />
-                <TimelineItem
-                  title="Software Engineer"
-                  subtitle="Innovate Co. | 2018 - 2021"
-                  description="Developed and maintained customer-facing web applications using React and Node.js."
-                />
-                <TimelineItem
-                  title="B.S. in Computer Science"
-                  subtitle="State University | Graduated 2018"
-                  description="Focused on algorithms, data structures, and machine learning principles."
-                />
+                {milestones.map((m, i) => (
+                  <TimelineItem
+                    key={i}
+                    title={m.title}
+                    subtitle={m.subtitle}
+                    description={m.description}
+                    badge={m.current ? 'Current' : undefined}
+                  />
+                ))}
               </ol>
             </SectionCard>
           </div>
@@ -95,9 +117,9 @@ function About() {
             <CodeBlock code={profileData} />
             <SectionCard title="// Connect">
               <div className="mt-3 flex flex-col space-y-5">
-                <SocialLink icon={<FaGithub />} label="Github" />
-                <SocialLink icon={<FaLinkedin />} label="LinkedIn" />
-                <SocialLink icon={<FaEnvelope />} label="Email" />
+                {visibleSocials.map(s => (
+                  <SocialLink key={s.kind} icon={socialIcon[s.kind]} label={s.label} href={s.href} />
+                ))}
               </div>
             </SectionCard>
           </div>

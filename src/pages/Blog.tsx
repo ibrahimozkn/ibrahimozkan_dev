@@ -1,11 +1,10 @@
 import React from 'react';
 import BlogPostCard from '../components/blog/BlogPostCard';
+import { portfolio } from '../data/portfolio';
 
-interface BlogPostsProps {
-  blogPosts: BlogPost[];
-}
 
-function Blog({ blogPosts }: BlogPostsProps) {
+function Blog() {
+  const blogPosts = portfolio.blogPosts;
   const [searchTerm, setSearchTerm] = React.useState('');
 
   const filteredPosts = React.useMemo(

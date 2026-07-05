@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import data from '../assets/data.json';
+import { portfolio } from '../data/portfolio';
 import { Link } from 'react-router-dom';
 import remarkGfm from 'remark-gfm';
 
@@ -10,7 +10,7 @@ function BlogPost() {
   const [markdown, setMarkdown] = useState<string>('');
   const [loading, setLoading] = useState(true);
 
-  const post = data.blogPosts.find((p) => p.id.toString() === slug);
+  const post = portfolio.blogPosts.find((p) => p.id.toString() === slug);
 
   useEffect(() => {
     if (post?.id) {
